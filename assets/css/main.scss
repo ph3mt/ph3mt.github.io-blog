@@ -1,0 +1,9 @@
+---
+---
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* Qui puoi mettere override personalizzati, es:
+.post-title { letter-spacing: 0.2px; }
+*/

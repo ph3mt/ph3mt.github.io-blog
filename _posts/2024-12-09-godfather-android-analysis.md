@@ -1,15 +1,16 @@
 ---
 title:  "GodFather Android Malware Analysis"
 date: 2024-12-10
+categories: [Blog]
+tags: [Malware, Android]
+author: true
 excerpt_separator: "<!--more-->"
-categories:
-  - Blog
-tags:
-  - Malware
-  - Android
-author: true        
-share: false
-featured_image: /assets/images/2024-12-09-godfather-android-analysis/GodFather.png' | relative_url }})
+# immagine di testata della pagina:
+header:
+  image: /ph3mt.github.io-blog/assets/images/2024-12-09-godfather-android-analysis/GodFather.png
+  caption: "Figure 0 - GodFather"
+# miniatura (per liste e related)
+thumbnail: /ph3mt.github.io-blog/assets/images/2024-12-09-godfather-android-analysis/GodFather.png
 ---
 
 ![Figure 0 - GodFather]({{ '/assets//images/2024-12-09-godfather-android-analysis/GodFather.png' | relative_url }})'
