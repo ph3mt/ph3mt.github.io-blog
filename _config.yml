@@ -1,0 +1,19 @@
+title: Ph3mt Blog
+description: BugBounty, Hack, Research.
+author: ph3mt
+theme: minima
+
+# Per il sito utente lascia url/baseurl vuoti.
+# Per sito di progetto vedi Passo 6.
+
+# Mostra pagine nel menu (tema "minima")
+header_pages:
+  - about.md
+  - archive.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+timezone: Europe/Rome
