@@ -9,10 +9,10 @@ tags:
   - Android
 author: true        
 share: false
-featured_image: /assets/images/2024-12-09-godfather-android-analysis/GodFather.png
+featured_image: /assets/images/2024-12-09-godfather-android-analysis/GodFather.png' | relative_url }})
 ---
 
-![Figure 0 - GodFather]({{ '/assets/images/2024-12-09-godfather-android-analysis/GodFather.png' | relative_url }})
+![Figure 0 - GodFather]({{ '/assets//images/2024-12-09-godfather-android-analysis/GodFather.png' | relative_url }})' | relative_url }})
 
 
 
@@ -26,15 +26,15 @@ In this article, we will explore how this version of the malware communicates wi
 
 Looking for the SHA-256 of the apk on [VirusTotal](https://www.virustotal.com/gui/file/20116083565a50f6b2db59011e9994e9a9f5db5994703d53233b8b202a5ad2f3), we immediately notice that it is already reported as malicious by several security vendors.
 
-![Figure 1 - VirusTotal](/assets/images/2024-12-09-godfather-android-analysis/img1.png) 
+![Figure 1 - VirusTotal]({/assets/images/2024-12-09-godfather-android-analysis/img1.png' | relative_url }})'| relative_url ) }})
 
 The application bundle contains several files, the **app.xml** file contained in the shared_prefs looks interesting (it will be explained later).
 
-![Figure 2 - Bundle details](/assets/images/2024-12-09-godfather-android-analysis/img2.png) 
+![Figure 2 - Bundle details](assets/images/2024-12-09-godfather-android-analysis/img2.png' | relative_url }})) '| relative_url ) }})
 
 The domain (which will be explained later in the article) also turns out to be malicious.
 
-![Figure 3 - VirusTotal2](/assets/images/2024-12-09-godfather-android-analysis/img3.png)
+![Figure 3 - VirusTotal2]({{ '/assets//images/2024-12-09-godfather-android-analysis/img3.png' | relative_url }}))'| relative_url ) }})
 
 ## New Version of GodFather
 
@@ -44,11 +44,11 @@ The first thing one notices upon examining the apk is the absence of an anti-emu
 
 The strings in the application appear to be encrypted, in fact in the following image you can see some of the encrypted strings used by the malware.
 
-![Figure 4 - BuildConfig](/assets/images/2024-12-09-godfather-android-analysis/img4.png)
+![Figure 4 - BuildConfig]({{ '/assets//images/2024-12-09-godfather-android-analysis/img4.png' | relative_url }}))'| relative_url ) }})
 
 The class that deals with decrypt these strings is **effluvias**.
 
-![Figure 5 - Effluvias Class](/assets/images/2024-12-09-godfather-android-analysis/img5.png)
+![Figure 5 - Effluvias Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img5.png' | relative_url }}))'| relative_url ) }})
 
 This function decrypts a base64 text using the AES algorithm in CBC mode with PKCS5 padding.
 
@@ -109,11 +109,11 @@ With the script it was possible create a full list of Encrypted and Decrypted St
 
 Having installed the apk in the emulator, it was possible to start observing its behavior. Regarding network calls, we can see an attempt to connect to the first  in the image below:
 
-![Figure 6 - Http Request](/assets/images/2024-12-09-godfather-android-analysis/img6.png)
+![Figure 6 - Http Request]({{ '/assets//images/2024-12-09-godfather-android-analysis/img6.png' | relative_url }}))
 
 Examining the code we find references to it:
 
-![Figure 7 - VirusTotal](/assets/images/2024-12-09-godfather-android-analysis/img7.png)
+![Figure 7 - VirusTotal]({{ '/assets//images/2024-12-09-godfather-android-analysis/img7.png' | relative_url }}))
  
 
 Using the script to decipher the strings in fact we find that:
@@ -122,7 +122,7 @@ Using the script to decipher the strings in fact we find that:
 o7lGWUU/28+5RpweyMuUGihsbHNkfHAHwgyycKpQfBmF6MkVSa58Dvr6WU6eFxLJ:https://t[.]me/famokorapisoram
 ```
 
-![Figure 8 - Decrypted String](/assets/images/2024-12-09-godfather-android-analysis/img8.png) 
+![Figure 8 - Decrypted String]({{ '/assets//images/2024-12-09-godfather-android-analysis/img8.png' | relative_url }})) 
 
 The string also appears to be encrypted, plus we find that this particular string is also present in the Shared Preference:
 
@@ -132,7 +132,7 @@ The string also appears to be encrypted, plus we find that this particular strin
 
 Continuing the analysis we find that:
 
-![Figure 9 - Shared Preferences Data](/assets/images/2024-12-09-godfather-android-analysis/img9.png) 
+![Figure 9 - Shared Preferences Data]({{ '/assets//images/2024-12-09-godfather-android-analysis/img9.png' | relative_url }})) 
 
 Contextualizing them: 
 
@@ -236,12 +236,12 @@ It returns the following url:
 
 https://yukoramparata[.]top/zamra/aaa/
 
-![Figure 10 - Http Request](/assets/images/2024-12-09-godfather-android-analysis/img10.png) 
+![Figure 10 - Http Request]({{ '/assets//images/2024-12-09-godfather-android-analysis/img10.png' | relative_url }})) 
 
 Analyzing the endpoint on VirusTotal it was found to be malicious: 
 
 
-![Figure 11 - C2 Server Communication](/assets/images/2024-12-09-godfather-android-analysis/img11.png)
+![Figure 11 - C2 Server Communication]({{ '/assets//images/2024-12-09-godfather-android-analysis/img11.png' | relative_url }}))
 
 ### Step3 : Shared Preference and Talking with C2
 
@@ -319,7 +319,7 @@ The main functions involved in reading and writing Shared Preference are Bedamen
 
 #### Bedamned 
 
-![Figure 12 - Bedamned Class](/assets/images/2024-12-09-godfather-android-analysis/img12.png)
+![Figure 12 - Bedamned Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img12.png' | relative_url }}))
 
 
 The function retrives data from SharedPreference: 
@@ -342,7 +342,7 @@ If the key does not exist, it returns a default value.
 
 #### Sandrakottos 
 
-![Figure 13 - Sandrakottos Class](/assets/images/2024-12-09-godfather-android-analysis/img13.png) 
+![Figure 13 - Sandrakottos Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img13.png' | relative_url }})) 
 
 
 The function writes data to shared preference, inserts the key-value paur (n,p) into the SharedPreferences 
@@ -370,7 +370,7 @@ Having found the function that read and write the share preferences, it was poss
 
 #### Champaka
 
-![Figure 14 - Champaka Class](/assets/images/2024-12-09-godfather-android-analysis/img14.png)
+![Figure 14 - Champaka Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img14.png' | relative_url }}))
 
 
 The function generates a random string, which will then be used as the identifier of the device on which the malware is installed, to communicate with the c2 (we will see in the appropriate section).
@@ -394,7 +394,7 @@ The created string will contain numbers from 0 to 9 and lowercase letters from a
 #### Undissuadably
 
 
-![Figure 15 - Undissuadably Class](/assets/images/2024-12-09-godfather-android-analysis/img15.png) 
+![Figure 15 - Undissuadably Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img15.png' | relative_url }})) 
 
 
 It Initializes an OkHttpClient  object with different timeouts, constructs a FormBody using the parameters provided in the HashMap. Creates and sends HTTP POST request with the parameters.
@@ -507,7 +507,7 @@ public static String undissuadably(final Context context, String url, HashMap<St
 #### Spellican
 
 
-![Figure 16 - Spellican Class](/assets/images/2024-12-09-godfather-android-analysis/img16.png)
+![Figure 16 - Spellican Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img16.png' | relative_url }}))
 
 
 This function creates an OkHttpClient.Builder. 
@@ -516,7 +516,7 @@ Convert the response body to a string using a regex to search for a specific met
 For each occurrence found by the regex, call the Sandrakottos method to save the content in the SharedPreferences under the key “min”.
 
 
-![Figure 17 - SharedPreference Reference](/assets/images/2024-12-09-godfather-android-analysis/img17.png) 
+![Figure 17 - SharedPreference Reference]({{ '/assets//images/2024-12-09-godfather-android-analysis/img17.png' | relative_url }})) 
 Which, in fact, turns out to be the C2 string analyzed earlier.
 
 
@@ -549,7 +549,7 @@ public static void spellican(String url, Context context) throws IOException {
 
 #### Rarefeatured
 
-![Figure 18 - Rarefeatured Class](/assets/images/2024-12-09-godfather-android-analysis/img18.png) 
+![Figure 18 - Rarefeatured Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img18.png' | relative_url }})) 
 
 This function prepares and sends an http request.
 This function is confusing because it uses two variables called effluvias and effluvias2 with values “alt” and “ky” respectively, ( Effluvias is the same name as the function that is used to decipher strings). 
@@ -601,7 +601,7 @@ The rarefeatured function appears to prepare and send an HTTP POST request inclu
 Checking the requests from our device proxy:
 
 
-![Figure 19 - Http Request Example](/assets/images/2024-12-09-godfather-android-analysis/img19.png)
+![Figure 19 - Http Request Example]({{ '/assets//images/2024-12-09-godfather-android-analysis/img19.png' | relative_url }}))
 
 
 ### Step4 : Retrieve Shared Preference and Talking with C2
@@ -611,13 +611,13 @@ The data it sends is all data that this malware retrieves in different ways, spe
 
 #### JJ
 
-![Figure 20 - JJ Class](/assets/images/2024-12-09-godfather-android-analysis/img20.png)
+![Figure 20 - JJ Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img20.png' | relative_url }}))
 
 The JJ function collects device information (manufacturer and model) and sends a specific code associated with these details using a call to Tamarix. Sandrakottos. 
 This could be used to keep track of the type of device that is using the app or to send specific information to the app server for device management or profiling.
 Ex. Using an emulator for analysis is returned the value device 2
 
-![Figure 21 - Device Check Shared Preference](/assets/images/2024-12-09-godfather-android-analysis/img21.png)
+![Figure 21 - Device Check Shared Preference]({{ '/assets//images/2024-12-09-godfather-android-analysis/img21.png' | relative_url }}))
 
 
 ```java
@@ -646,7 +646,7 @@ public static void JJ(Context context) {
 
 #### Untraffickable
 
-![Figure 22 - Untraffickable Class](/assets/images/2024-12-09-godfather-android-analysis/img22.png)
+![Figure 22 - Untraffickable Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img22.png' | relative_url }}))
 
 It checks if the device is of a certain type (device equals “4”) via the Tamarix.bedamned.
 If true, it sets a value of “true” in the context with the key “opi”.
@@ -803,7 +803,7 @@ https://yukoramparata.top/zamra/aaa/rx/f.php?f=ALL_PIN&p=0hh2fpkr5zt72|en
 
 #### Speculated
 
-![Figure 23 - Speculated Class](/assets/images/2024-12-09-godfather-android-analysis/img23.png)
+![Figure 23 - Speculated Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img23.png' | relative_url }}))
 
 
 The function gets an instance of KeyguardManager, it checks whether the device is locked using the isKeyguardLocked() 
@@ -851,14 +851,14 @@ public static void speculated(final Context ctx) {
 ```
 
 
-![Figure 24 - Shared Preference Example](/assets/images/2024-12-09-godfather-android-analysis/img24.png)
+![Figure 24 - Shared Preference Example]({{ '/assets//images/2024-12-09-godfather-android-analysis/img24.png' | relative_url }}))
 
 
 
 
 #### Osnabruck
 
-![Figure 25 - Osnabruck Class](/assets/images/2024-12-09-godfather-android-analysis/img25.png)
+![Figure 25 - Osnabruck Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img25.png' | relative_url }}))
 
 In this function a “bowfin” string is initialized with the value, representing an empty string or URL escape character.
 A loop is run through the list of installed applications obtained through the PackageManager.
@@ -894,7 +894,7 @@ Tamarix.Sandrakottos(context, ("alt"), bowfin);
 
 In the shared preference we can see:
 
-![Figure 26 - Empty Shared Preference Example](/assets/images/2024-12-09-godfather-android-analysis/img26.png)
+![Figure 26 - Empty Shared Preference Example]({{ '/assets//images/2024-12-09-godfather-android-analysis/img26.png' | relative_url }}))
 
 
 
@@ -904,7 +904,7 @@ That is because we use a New Emulator with no application installed.
 #### Malacostraca
 
 
-![Figure 27 - Malacostraca Class](/assets/images/2024-12-09-godfather-android-analysis/img27.png)
+![Figure 27 - Malacostraca Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img27.png' | relative_url }}))
 
 This function retrieves the value associated with the key “ky” from the SharedPreference. 
 
@@ -920,7 +920,7 @@ Adds “call.php” to the obtained base url.
 
 Call undissuadably method to perform an HTTP POST request to this URL with the params. 
 
-![Figure 28 - Request Http](/assets/images/2024-12-09-godfather-android-analysis/img28.png)
+![Figure 28 - Request Http]({{ '/assets//images/2024-12-09-godfather-android-analysis/img28.png' | relative_url }}))
 
 ```java
 
