@@ -12,7 +12,8 @@ share: false
 featured_image: /assets/images/2024-12-09-godfather-android-analysis/GodFather.png
 ---
 
-![Figure 0 - GodFather](/assets/images/2024-12-09-godfather-android-analysis/GodFather.png) 
+![Figure 0 - GodFather]({{ '/assets/images/2024-12-09-godfather-android-analysis/GodFather.png' | relative_url }})  
+
 
 
 GodFather is an Android malware that was first identified in mid 2023 and quickly attracted the attention of security experts because of its advanced capabilities and modular structure.
