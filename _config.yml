@@ -1,19 +1,40 @@
-title: Ph3mt Blog
-description: BugBounty, Hack, Research.
-author: ph3mt
-theme: minima
+title: "ph3mt blog"
+description: "Appunti, analisi e note tecniche"
+url: "https://ph3mt.github.io"            # dominio del profilo
+baseurl: "/ph3mt.github.io-blog"          # nome del repo (sito di progetto)
 
-# Per il sito utente lascia url/baseurl vuoti.
-# Per sito di progetto vedi Passo 6.
+# Tema via remote_theme (compatibile Pages)
+remote_theme: mmistakes/minimal-mistakes@4.24.0
 
-# Mostra pagine nel menu (tema "minima")
-header_pages:
-  - about.md
-  - archive.md
+# Skin (tema colori): default, dark, air, neon...
+minimal_mistakes_skin: "dark"
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Impostazioni lingua/ora
+locale: it
 timezone: Europe/Rome
+
+# Navigazione (la definiamo in _data/navigation.yml)
+nav:
+  main: []
+
+# Default per i post
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      related: true
+      share: true
+      show_date: true
+
+# Percorsi asset (non obbligatorio, solo promemoria)
+# assets/images/... le usi con {{ '/assets/...' | relative_url }}
