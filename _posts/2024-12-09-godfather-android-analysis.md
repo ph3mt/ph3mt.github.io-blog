@@ -12,7 +12,7 @@ share: false
 featured_image: /assets/images/2024-12-09-godfather-android-analysis/GodFather.png' | relative_url }})
 ---
 
-![Figure 0 - GodFather]({{ '/assets//images/2024-12-09-godfather-android-analysis/GodFather.png' | relative_url }})' | relative_url }})
+![Figure 0 - GodFather]({{ '/assets//images/2024-12-09-godfather-android-analysis/GodFather.png' | relative_url }})'
 
 
 
@@ -26,15 +26,15 @@ In this article, we will explore how this version of the malware communicates wi
 
 Looking for the SHA-256 of the apk on [VirusTotal](https://www.virustotal.com/gui/file/20116083565a50f6b2db59011e9994e9a9f5db5994703d53233b8b202a5ad2f3), we immediately notice that it is already reported as malicious by several security vendors.
 
-![Figure 1 - VirusTotal]({/assets/images/2024-12-09-godfather-android-analysis/img1.png' | relative_url }})'| relative_url ) }})
+![Figure 1 - VirusTotal]({/assets/images/2024-12-09-godfather-android-analysis/img1.png' | relative_url }})'
 
 The application bundle contains several files, the **app.xml** file contained in the shared_prefs looks interesting (it will be explained later).
 
-![Figure 2 - Bundle details](assets/images/2024-12-09-godfather-android-analysis/img2.png' | relative_url }})) '| relative_url ) }})
+![Figure 2 - Bundle details](assets/images/2024-12-09-godfather-android-analysis/img2.png' | relative_url }}) '
 
 The domain (which will be explained later in the article) also turns out to be malicious.
 
-![Figure 3 - VirusTotal2]({{ '/assets//images/2024-12-09-godfather-android-analysis/img3.png' | relative_url }}))'| relative_url ) }})
+![Figure 3 - VirusTotal2]({{ '/assets//images/2024-12-09-godfather-android-analysis/img3.png' | relative_url }})'
 
 ## New Version of GodFather
 
@@ -44,11 +44,11 @@ The first thing one notices upon examining the apk is the absence of an anti-emu
 
 The strings in the application appear to be encrypted, in fact in the following image you can see some of the encrypted strings used by the malware.
 
-![Figure 4 - BuildConfig]({{ '/assets//images/2024-12-09-godfather-android-analysis/img4.png' | relative_url }}))'| relative_url ) }})
+![Figure 4 - BuildConfig]({{ '/assets//images/2024-12-09-godfather-android-analysis/img4.png' | relative_url }})'
 
 The class that deals with decrypt these strings is **effluvias**.
 
-![Figure 5 - Effluvias Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img5.png' | relative_url }}))'| relative_url ) }})
+![Figure 5 - Effluvias Class]({{ '/assets//images/2024-12-09-godfather-android-analysis/img5.png' | relative_url }})'
 
 This function decrypts a base64 text using the AES algorithm in CBC mode with PKCS5 padding.
 
