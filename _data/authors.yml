@@ -1,0 +1,19 @@
+matteo_piciarelli:
+  name        : "Matteo Piciarelli"
+  bio         : >
+    Penetration Tester passionate about Android security and reverse engineering.  
+    Security researcher, tech writer, and martial arts enthusiast.
+  avatar      : "/assets/images/profile.jpg"   # optional: add your profile picture here
+  location    : "Italy"
+  uri         : "https://ph3mt.github.io/ph3mt.github.io-blog/"
+  email       : "you@example.com"              # optional
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:you@example.com"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/ph3mt"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/matteo-piciarelli-5a02a6146/"

@@ -3,7 +3,8 @@ title:  "GodFather Android Malware Analysis"
 date: 2024-12-10
 categories: [Blog]
 tags: [Malware, Android]
-author: true
+author: matteo_piciarelli
+author_profile: true
 excerpt_separator: "<!--more-->"
 # immagine di testata della pagina:
 header:
