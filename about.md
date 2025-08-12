@@ -32,7 +32,7 @@ When I’m not in front of a terminal, I dedicate my time to:
 - Supporting **AS Roma** 🟡🔴
 - Spending time with my cat **Tribola**, who supervises my work.
 
-![Tribola](/assets/images/Utili/tibi.png){: .align-center width="300" }
+![Tribola](/assets/images/Utili/tribi.png){: .align-center width="300" }
 
 ---
 
