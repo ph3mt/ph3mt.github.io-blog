@@ -2,6 +2,7 @@
 layout: single
 title: "About"
 permalink: /about/
+author: matteo_piciarelli
 author_profile: true
 ---
 

@@ -3,10 +3,10 @@ matteo_piciarelli:
   bio         : >
     Penetration Tester passionate about Android security and reverse engineering.  
     Security researcher, tech writer, and martial arts enthusiast.
-  avatar      : "/assets/images/Utili/avatar.png"   # optional: add your profile picture here
+  avatar      : "/assets/images/Utili/avatar.png"  
   location    : "Italy"
   uri         : "https://ph3mt.github.io/ph3mt.github.io-blog/"
-  email       : "ph3mtph3@proton.me"              # optional
+  email       : "ph3mtph3@proton.me"              
   links:
     - label: "Email"
       icon: "fas fa-envelope"
