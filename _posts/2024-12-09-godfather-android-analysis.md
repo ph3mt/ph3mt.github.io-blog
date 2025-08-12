@@ -7,10 +7,11 @@ author: true
 excerpt_separator: "<!--more-->"
 # immagine di testata della pagina:
 header:
-  image: /ph3mt.github.io-blog/assets/images/2024-12-09-godfather-android-analysis/GodFather.png
-  caption: "Figure 0 - GodFather"
-# miniatura (per liste e related)
-thumbnail: /ph3mt.github.io-blog/assets/images/2024-12-09-godfather-android-analysis/GodFather.png
+  image:  /assets/images/2024-12-09-godfather-android-analysis/GodFather.png   # hero nella pagina del post
+  teaser: /assets/images/2024-12-09-godfather-android-analysis/GodFather.png   # miniatura in liste/archivi
+  image_description: "Figure 0 - GodFather"
+  # (opzionale) immagine per social card, se vuoi diversa dal banner:
+  # og_image: /assets/images/2024-12-09-godfather-android-analysis/GodFather.png
 ---
 
 ![Figure 0 - GodFather]({{ '/assets//images/2024-12-09-godfather-android-analysis/GodFather.png' | relative_url }})'
