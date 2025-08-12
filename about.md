@@ -4,13 +4,36 @@ title: "About"
 permalink: /about/
 author: matteo_piciarelli
 author_profile: true
+header:
+  image: /assets/images/Utili/copertina_ai.png   # immagine di copertina
+  caption: "Security, Research & Reverse Engineering"
 ---
 
-I am a **Penetration Tester** with a strong passion for **Android security** and **reverse engineering**.  
-My professional focus is on analyzing, breaking down, and securing applications and systems, with a particular interest in low-level behavior, malware analysis, and uncovering complex security flaws.
+![My Avatar](/assets/images/Utili/avatar.png){: .align-left width="200" style="margin-right:20px;" }
 
-When I’m not in front of a terminal, I dedicate my time to physical training — I’m an enthusiast of both the gym and **Brazilian Jiu-Jitsu**.  
-I’m also a passionate **AS Roma** supporter and share my life with a cat named **Tribola**, who supervises my work from the comfort of my desk.
+I am a **Penetration Tester** and security researcher with a deep passion for **Android security** and **reverse engineering**.  
+My work focuses on dissecting complex applications, identifying vulnerabilities, and implementing effective security measures.
 
-This blog is where I document research, share technical write-ups, and explore security topics that I find challenging and relevant.  
-My goal is to contribute to the security community by providing detailed, reproducible analyses and insights into emerging threats.
+---
+
+## Skills & Expertise
+- **Penetration Testing** 
+- **Android Security** 
+- **Reverse Engineering** 
+- **Malware Analysis** 
+- **Security Research & Exploit Development**
+
+
+---
+
+## Beyond the Screen
+When I’m not in front of a terminal, I dedicate my time to:
+- **Brazilian Jiu-Jitsu** and strength training 
+- Supporting **AS Roma** 🟡🔴
+- Spending time with my cat **Tribola**, who supervises my work.
+
+![Tribola](/assets/images/Utili/tibi.png){: .align-center width="300" }
+
+---
+
+This blog is where I share my **technical write-ups**, in-depth analyses, and research projects, aiming to contribute valuable, reproducible, and high-quality content to the security community.
