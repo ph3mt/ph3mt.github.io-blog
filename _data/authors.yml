@@ -6,11 +6,11 @@ matteo_piciarelli:
   avatar      : "/assets/images/Utili/avatar.png"   # optional: add your profile picture here
   location    : "Italy"
   uri         : "https://ph3mt.github.io/ph3mt.github.io-blog/"
-  email       : "you@example.com"              # optional
+  email       : "ph3mtph3@proton.me"              # optional
   links:
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "mailto:you@example.com"
+      url: "mailto:ph3mtph3@proton.me"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/ph3mt"
